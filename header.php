@@ -8,5 +8,5 @@
 </head>
 <body <?php body_class(); ?>>
     <header class="header-test">
-        Main header of the website V2
+        <?php _e('Main header of the website V3', 'websitewizards'); ?>
     </header>

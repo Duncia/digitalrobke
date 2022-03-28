@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+Testas
 
 <h1><?php _e('Front page example V3', 'websitewizards'); ?></h1>
 <p>
