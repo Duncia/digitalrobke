@@ -7,4 +7,4 @@ import HomePage from "../assets/js/HomePage";
 //Instantiate new object using modules and classes
 const homePage = new HomePage();
 
-console.log('nera klaidu V2');
+console.log('nera klaidu V3');

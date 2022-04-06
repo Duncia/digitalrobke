@@ -1,12 +1,67 @@
-body{
-    background-color: #FBEAFF;
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/assets/fonts/Montserrat-Light.woff2') format('woff2'),
+        url('/assets/fonts/Montserrat-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
 }
-.footer-test{
-    background-color: #845EC2;
-    text-align: center;
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/assets/fonts/Montserrat-Bold.woff2') format('woff2'),
+        url('/assets/fonts/Montserrat-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
 }
-.header-test{
-    background-color: orangered;
-    font-size: 2rem;
-    text-align: center;
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/assets/fonts/Montserrat-Medium.woff2') format('woff2'),
+        url('/assets/fonts/Montserrat-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Courier Prime';
+    src: url('/assets/fonts/CourierPrime-Regular.woff2') format('woff2'),
+        url('/assets/fonts/CourierPrime-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+html{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    //This rule converts 1 rem to 10px
+    font-size: 62.5%;
+    line-height: 1;
+
+    @include tablet {
+        font-size: 75.0%;
+    };
+    @include smallLaptop {
+        font-size: 87.5%;
+    };
+    @include desktop {
+        font-size: 100.0%;
+    };
+    @include largeScreen {
+        font-size: 112.5%;
+    };
+}
+
+.heading{
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-family: 'Montserrat', sans-serif;
+
+    &--1{
+        font-size: 4rem;
+        color: $color-pink;
+        text-transform: uppercase;
+    }
 }
