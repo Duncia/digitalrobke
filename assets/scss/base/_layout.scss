@@ -1,0 +1,16 @@
+.container {
+    width: 100%;
+
+    &__inner{
+        max-width: $max-width;
+        margin: auto;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+.d-flex-space-btwn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}

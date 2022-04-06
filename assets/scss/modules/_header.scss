@@ -1,0 +1,95 @@
+.header {
+    padding: 0.5rem 0;
+
+    &__logo {
+        max-width: 15rem;
+    }
+
+    &__menu{
+        display: none;
+        @include smallLaptop {
+            display: flex;
+        };
+        flex-wrap: wrap;
+        align-items: center;
+        color: $color-grey;
+    }
+    &__burger{
+        width: 3rem;
+        height: 2rem;
+        display: flex;
+        @include smallLaptop {
+            display: none;
+        };
+        align-items: center;
+        cursor: pointer;
+    
+        &__middle{
+            position: relative;
+            transition: all .2s;  
+            &,
+            &::before,
+            &::after {
+                width: 3rem;
+                height: 3px;
+                background-color: $color-grey;
+            }
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                transition: all .5s;
+            }
+            &::before {
+                top: -8px;
+            }
+            &::after {
+                top: 8px;
+            }
+        }
+        &__middle--active {
+            background-color: transparent;
+            &::before {
+                top: 0 !important;
+                transform: rotate(45deg);
+                transition: all .5s;
+            }
+            &::after {
+                top: 0 !important;
+                transform: rotate(-45deg);
+                transition: all .5s;
+            }
+        }
+    }
+}
+.navigation-top {
+    ul {
+        list-style: none;
+        display: flex;
+
+        li {
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-right: 2rem;
+
+            :hover{
+                color: $color-grey-hover;
+            }
+        }
+    }
+}
+
+.icon-linkedin__svg{
+    width: 2rem;
+    height: 2rem;
+    fill: $color-grey;
+
+    @include tablet {
+        width: 1.8rem;
+    height: 1.8rem;
+    };
+
+    :hover{
+        fill: $color-grey-hover;
+    }
+}

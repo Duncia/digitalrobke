@@ -34,21 +34,17 @@
 html{
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    //This rule converts 1 rem to 10px
-    font-size: 62.5%;
+    font-size: 50.0%;
     line-height: 1;
 
     @include tablet {
-        font-size: 75.0%;
+        font-size: 60.0%;
     };
     @include smallLaptop {
-        font-size: 87.5%;
-    };
-    @include desktop {
-        font-size: 100.0%;
+        font-size: 62.5%;
     };
     @include largeScreen {
-        font-size: 112.5%;
+        font-size: 75%;
     };
 }
 
