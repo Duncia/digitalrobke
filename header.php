@@ -7,15 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body <?php body_class(); ?>>
-    <header class="container header">
+    <header class="container header" id="header">
         <div class="container__inner d-flex-space-btwn">
             <div class="header__logo">
-                <img src="<?php echo get_template_directory_uri() . '/images/logo-website-wizards.svg'; ?>" alt="Website Wizards Logo">
+                <a href="<?php echo get_home_url(); ?>">
+                    <img src="<?php echo get_template_directory_uri() . '/images/logo-website-wizards.svg'; ?>" alt="Website Wizards Logo">
+                </a>
             </div>
             <div class="header__burger" id="burger">
                     <div class="header__burger__middle" id="burger__middle"></div>
                 </div>
-            <div class="header__menu">
+            <div class="header__menu" id="header-menu">
                 <nav class="navigation-top">
                     <ul>
                         <li><a href="">Examples</a></li>
@@ -49,5 +51,14 @@
                     </a>
                 </div>
             </div>
+        </div>
+        <div class="mobile-menu mobile-menu--close" id="mobile-menu">
+            <nav class="mobile-menu__nav">
+                <ul>
+                    <li><a href="">Examples</a></li>
+                    <li><a href="">General info</a></li>
+                    <li><a href="">Contact me</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
