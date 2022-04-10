@@ -1,4 +1,62 @@
 .footer{
     background-color: $color-purple;
     color: $color-white;
+
+    &__nav {
+        font-weight: 400;
+
+        ul {
+            list-style: none;
+            display: block;
+            @include tablet {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+                grid-gap: 1.5rem;
+            };
+
+            li {
+                font-size: 1.6rem;
+                @include smallLaptop {
+                    font-size: 1.4rem;
+                };
+                margin-bottom: 3rem;
+                a:hover{
+                    color: $color-grey-hover;
+                }
+            }
+        }
+    }
+
+    &__text {
+        font-family: 'Courier Prime', monospace;
+        text-align: justify;
+        max-width: 30rem;
+        font-size: 1.2rem; 
+    }
+
+}
+.footer__nav ul li .sub-menu {
+    display: block;
+    margin-top: 1rem;
+    li {
+        margin-bottom: 1rem;
+    }
+}
+.footer__icons{
+    display: flex;
+
+    .footer-svg{
+        max-width: 3rem;
+        margin-right: 2rem;
+    }
+    .footer-icon__linkedin{
+        width: 2rem;
+        height: 2rem;
+        fill: $color-white;
+    }
+    .footer-icon__github{
+        width: 2.2rem;
+        height: 2.2rem;
+        fill: $color-white;
+    }
 }

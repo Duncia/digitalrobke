@@ -1,5 +1,6 @@
 <?php get_header(); ?>
-<h1 class="heading heading--1">Heading 1</h1>
+
+<?php get_template_part('template-parts/hero-text-image'); ?>
 
 <h1><?php _e('Front page example V3', 'websitewizards'); ?></h1>
 <p>
@@ -14,5 +15,7 @@ else :
     echo 'Nothing found.';
 endif;
 ?>
+
+<?php get_template_part('template-parts/call-to-contact'); ?>
 
 <?php get_footer(); ?>

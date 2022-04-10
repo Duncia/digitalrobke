@@ -20,9 +20,23 @@
             <div class="header__menu" id="header-menu">
                 <nav class="navigation-top">
                     <ul>
-                        <li><a href="">Examples</a></li>
-                        <li><a href="">General info</a></li>
-                        <li><a href="">Contact me</a></li>
+                        <li>
+                            Examples
+                            <ul class="sub-menu">
+                                <li><a href="">All examples</a></li>
+                                <li><a href="">CMS</a></li>
+                                <li><a href="">Content</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            Information
+                            <ul class="sub-menu">
+                                <li><a href="">General FAQ</a></li>
+                                <li><a href="">Dev stack & processes</a></li>
+                                <li><a href="">Regular cooperation</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">Contacts</a></li>
                     </ul>
                 </nav>
                 <div class="icon-linkedin">
@@ -55,9 +69,21 @@
         <div class="mobile-menu mobile-menu--close" id="mobile-menu">
             <nav class="mobile-menu__nav">
                 <ul>
-                    <li><a href="">Examples</a></li>
-                    <li><a href="">General info</a></li>
-                    <li><a href="">Contact me</a></li>
+                    <li>
+                        <a href="">All examples</a>
+                        <ul class="sub-menu">
+                            <li><a href="">CMS</a></li>
+                            <li><a href="">Content</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">General FAQ</a>
+                        <ul class="sub-menu">
+                            <li><a href="">Dev stack & processes</a></li>
+                            <li><a href="">Regular cooperation</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Contacts</a></li>
                 </ul>
             </nav>
         </div>
