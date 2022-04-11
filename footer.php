@@ -11,8 +11,9 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="">General FAQ</a>
+                        <a href="">Home page</a>
                         <ul class="sub-menu">
+                            <li><a href="">General FAQ</a></li>
                             <li><a href="">Dev stack & processes</a></li>
                             <li><a href="">Regular cooperation</a></li>
                         </ul>

@@ -1,0 +1,22 @@
+.hero__content{
+    text-align: center;
+    @include smallLaptop {
+        text-align: left;
+    };
+
+    &--paragraph{
+        padding: 2rem 0;
+        p {
+            font-family: 'Courier Prime', monospace;
+            font-size: 2rem;
+            color: $color-grey;
+        }
+    }
+}
+.intro {
+    background-color: $color-purple;
+
+    img {
+        max-width: 35rem;
+    }
+}

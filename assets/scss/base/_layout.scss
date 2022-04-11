@@ -14,3 +14,25 @@
     justify-content: space-between;
     align-items: center;
 }
+.d-flex-2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.flex-2-child-50{
+    flex-basis: 100%;
+    max-width: 600px;
+    padding: 1rem;
+    @include smallLaptop {
+        flex-basis: 50%;
+    };
+}
+.content-mx-60{
+    max-width: 60rem;
+    margin: auto;
+}
+.content-mx-35{
+    max-width: 35rem;
+    margin: auto;
+}
