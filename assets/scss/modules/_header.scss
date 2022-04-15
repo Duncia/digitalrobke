@@ -3,6 +3,7 @@
     background-color: $color-white;
     position: sticky;
     top: 0;
+    z-index: 20;
 
     &__logo {
         max-width: 15rem;

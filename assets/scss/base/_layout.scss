@@ -19,6 +19,12 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    &--rev{
+        flex-direction: column-reverse;
+        @include smallLaptop {
+            flex-direction: row;
+        };
+    }
 }
 .flex-2-child-50{
     flex-basis: 100%;

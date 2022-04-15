@@ -1,0 +1,41 @@
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.box {
+    flex-basis: 100%;
+    max-width: 30rem;
+    margin: 1rem;
+    padding: 4rem 1rem;
+    text-align: center;
+    box-shadow: 0 1.5rem 1.5rem 0 rgb(0 0 0 / 5%), 0 0 1.5rem 0 rgb(0 0 0 / 5%);
+    border-radius: .7rem;
+
+    &:hover{
+        transform: translateY(-2px);
+        box-shadow: 0 1.6rem 1.6rem 0 rgb(0 0 0 / 10%), 0 0 1.6rem 0 rgb(0 0 0 / 10%);
+    }
+
+    &__image{
+        max-width: 15rem;
+        margin: auto;
+        padding-bottom: 2rem;
+    }
+    &__content{
+
+        h4 {
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            color: $color-black;
+            padding-bottom: 2rem;
+        }
+
+        p {
+            font-size: 1.4rem;
+            line-height: 1.2;
+            color: $color-grey;
+            padding: 0rem 2rem;
+        }
+    }
+}
