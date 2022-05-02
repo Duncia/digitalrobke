@@ -28,7 +28,7 @@
 }
 .flex-2-child-50{
     flex-basis: 100%;
-    max-width: 600px;
+    max-width: 60rem;
     padding: 1rem;
     @include smallLaptop {
         flex-basis: 50%;

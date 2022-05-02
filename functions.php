@@ -14,6 +14,9 @@ add_action('after_setup_theme', 'webwizards_setup');
 function webwizards_js_css_files() {
     wp_enqueue_style('webwizards_main_styles', get_theme_file_uri('/build/style-index.css'));
     wp_enqueue_script('index', get_theme_file_uri('/build/index.js'), array('jquery'), '1.0.0', true);
+    if(is_page_template('contact-form-main.php')){
+      wp_enqueue_script('contact-form', get_theme_file_uri('assets/contact-form-js/contact-form.js'), array('jquery'), '1.0.0', true);
+    };
   }
 add_action('wp_enqueue_scripts', 'webwizards_js_css_files');
 

@@ -9,10 +9,17 @@
 <body <?php body_class(); ?>>
     <header class="container header" id="header">
         <div class="container__inner d-flex-space-btwn">
-            <div class="header__logo">
-                <a href="<?php echo get_home_url(); ?>">
-                    <img src="<?php echo get_template_directory_uri() . '/images/logo-website-wizards.svg'; ?>" alt="Website Wizards Logo">
-                </a>
+            <div class="header__left">
+                <div class="header__logo">
+                    <a href="<?php echo get_home_url(); ?>">
+                        <img src="<?php echo get_template_directory_uri() . '/images/logo-website-wizards.svg'; ?>" alt="Website Wizards Logo">
+                    </a>
+                </div>
+                <div class="header__language-switcher">
+                    <ul>
+                        <li>LT</li>
+                    </ul>
+                </div>
             </div>
             <div class="header__burger" id="burger">
                     <div class="header__burger__middle" id="burger__middle"></div>

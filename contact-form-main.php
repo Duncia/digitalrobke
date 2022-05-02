@@ -1,3 +1,8 @@
+<?php 
+/* Template Name: Contact form page */
+
+?>
+
 <?php get_header(); ?>
 
 <main class="container container--page">
@@ -14,8 +19,13 @@
         ?>
 
     </section>
+    <section>
+        <form action="">
+            Cia bus forma
+            <input type="text">
+            <button type="submit">Pateikti</button>
+        </form>
+    </section>
 </main>
-
-<?php get_template_part('template-parts/call-to-contact'); ?>
 
 <?php get_footer(); ?>
