@@ -102,6 +102,12 @@
                 background-image: linear-gradient(120deg, transparent 0%, transparent 15%, $color-black 15%);
             }
         }
+        .li-shop-desktop {
+            background-image: linear-gradient(120deg, transparent 0%, transparent 15%, $color-black 15%);
+            &:hover{
+                background-image: linear-gradient(120deg, transparent 0%, transparent 15%, $color-grey 15%);
+            }
+        }
     }
 }
 .navigation-top ul li:hover .sub-menu{
