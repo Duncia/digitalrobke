@@ -1,4 +1,4 @@
-    <footer class="container footer container--scroll-reveal">
+    <footer class="container <?php if(isset($args['class'])) { echo ($args['class']);};?> footer container--scroll-reveal">
         <div class="container__inner pt-md">
             <nav class="footer__nav">
                 <ul>

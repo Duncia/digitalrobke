@@ -1,9 +1,14 @@
 /*
 Reveal on scroll function using IntersectionObserver API.
+1. HTML class for full containers and parts of containers (.home-page-el like IMG or TEXT).
+2. InteresectionObserver initiated with function and threshold/root options.
+3. "observerCallbackF" function loops over each entry and in case intersecting removes hiding functions.
+    Then observer is ended called unobserve method.
+4. Hiding classes are added on load and also intersectionObserver is initiated. 
 */
 class HomePage {
     constructor(){
-        this.allContainers = document.querySelectorAll('.container');
+        this.allContainers = document.querySelectorAll('.container--home');
         this.allRevealedElements = document.querySelectorAll('.home-page-el');
         this.sectionObserver = new IntersectionObserver(this.observerCallbackF, {
             root: null,
@@ -15,13 +20,12 @@ class HomePage {
     observerCallbackF(entries, sectionObserver){
         entries.forEach(entry => {
             if(!entry.isIntersecting) return;
-            if(entry.target.classList.contains('container')){
+            if(entry.target.classList.contains('container--home')){
                 entry.target.classList.remove('container--scroll-hide');
             }
             if(entry.target.classList.contains('home-page-el')){
                 entry.target.classList.remove('home-page-el--hide');
             }
-            console.log(entry.target);
             sectionObserver.unobserve(entry.target);
         });
     };

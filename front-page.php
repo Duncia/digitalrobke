@@ -7,7 +7,7 @@ $homeTop = get_post_custom_values($key = 'home-top');
 
 <?php get_header(); ?>
 
-<section class="container hero">
+<section class="container container--home hero">
     <div class="container__inner d-flex-2 pt-md pb-md">
         <div class="hero__content flex-2-child-50">
             <h1 class="heading heading--1"><?php if(isset($homeTop)) {echo $homeTop[0];}; ?></h1>
@@ -17,19 +17,19 @@ $homeTop = get_post_custom_values($key = 'home-top');
             </div>
         </div>
         <figure class="flex-2-child-50">
-            <img srcset="<?php echo get_template_directory_uri() . '/images/home-top-img-mobile.webp'; ?> 365w, <?php echo get_template_directory_uri() . '/images/home-top-img.svg'; ?> 600w" alt="Home page map">
+            <img srcset="<?php echo get_template_directory_uri() . '/images/home-top-img-mobile.webp'; ?> 365w, <?php echo get_template_directory_uri() . '/images/home-top-img.svg'; ?> 600w" alt="Home page map"/>
         </figure>
     </div>
 </section>
 
-<section class="container intro container--scroll-reveal">
+<section class="container container--home intro container--scroll-reveal">
     <div class="container__inner txt-center pt-md pb-md">
         <h2 class="heading heading--2 clr-white pb-md">Custom solutions</h2>
         <p class="paragraph content-mx-60  clr-white home-page-el home-page-el--reveal">Let me know your vision about the perfect website and let’s see what can be created. Endless possibilities for layouts, content boxes and user journeys.</p>
     </div>
     <div class="container_inner d-flex-2 txt-center pb-md">
         <figure class="flex-2-child-50 home-page-el home-page-el--reveal">
-            <img src="<?php echo get_template_directory_uri() . '/images/cms-edit-content.svg'; ?>" alt="Edit content">
+            <img src="<?php echo get_template_directory_uri() . '/images/cms-edit-content.svg'; ?>" alt="Edit content"/>
         </figure>
         <div class="flex-2-child-50 home-page-el home-page-el--reveal">
             <h3 class="heading heading--3 clr-white pb-sm">Power of CMS</h3>
@@ -42,7 +42,16 @@ $homeTop = get_post_custom_values($key = 'home-top');
             <p class="paragraph clr-white pb-sm content-mx-35">Post news, introduce your services or products, get questions from customers and start building your network.</p>
         </div>
         <figure class="flex-2-child-50 home-page-el home-page-el--reveal">
-            <img srcset="<?php echo get_template_directory_uri() . '/images/city-london-mobile.webp'; ?> 470w, <?php echo get_template_directory_uri() . '/images/city-london.svg'; ?> 600w" alt="Edit content">
+                <img  
+                    class="lazy"
+                    srcset="<?php echo get_template_directory_uri() . '/images/lazy-load.png'; ?>"
+                    data-srcset="<?php echo get_template_directory_uri() . '/images/city-london-mobile.webp'; ?> 470w, <?php echo get_template_directory_uri() . '/images/city-london.svg';?> 600w" alt="Edit content"
+                    alt=""
+                />
+            <noscript>
+                <img srcset="<?php echo get_template_directory_uri() . '/images/city-london-mobile.webp'; ?> 470w, <?php echo get_template_directory_uri() . '/images/city-london.svg'; ?> 600w" alt="Edit content"/>
+            </noscript>
+
         </figure>
     </div>
     <div class="container_inner txt-center pb-md home-page-el home-page-el--reveal">
@@ -50,14 +59,14 @@ $homeTop = get_post_custom_values($key = 'home-top');
     </div>
 </section>
 
-<section class="container about container--scroll-reveal">
+<section class="container container--home about container--scroll-reveal">
     <div class="container__inner txt-center pt-md pb-md">
         <h2 class="heading heading--2 pb-md">About me</h2>
-        <p class="paragraph content-mx-60">I am web/WordPress developer with a focus to HTML, CSS, JavaScript browser side result and functionality (WordPress CMS). I can create or update your website.</p>
+        <p class="paragraph content-mx-60">I am web/WordPress developer with a focus to HTML, CSS, JavaScript and functionality (WordPress CMS). I can create or update your website.</p>
     </div>
 </section>
 
-<section class="container container--scroll-reveal">
+<section class="container container--home container--scroll-reveal">
     <div class="container__inner boxes pb-md">
         <div class="box">
             <figure class="box__image">
@@ -89,6 +98,16 @@ $homeTop = get_post_custom_values($key = 'home-top');
     </div>
 </section>
 
-<?php get_template_part('template-parts/call-to-contact'); ?>
+<?php 
+/*
+Passing CSS class name as argument to template part and footer to apply reveal on scroll effect.
+NOTE: The last style rule hides lazy loaded img in case JavaScript is turned off.
+*/
+$args = array('class' => 'container--home');
+get_template_part('template-parts/call-to-contact', '', $args); 
+?>
+<?php get_footer(null, $args); ?>
 
-<?php get_footer(); ?>
+<noscript>
+  <style>.lazy { display: none; }</style>
+</noscript>

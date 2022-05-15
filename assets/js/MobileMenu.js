@@ -1,3 +1,9 @@
+/*
+Mobile menu:
+1. Burger (as container), burger_middle the middle line and mobile menu div selected.
+2. Events method called (which includes click event listener and calls toggle menu method).
+3. Toggle menu adds/removes CSS classes.
+*/
 class MobileMenu {
     constructor() {
         this.mobileMenuDiv = document.querySelector("#burger");
@@ -9,7 +15,6 @@ class MobileMenu {
     events(){
         this.mobileMenuDiv.addEventListener('click', () => {
             this.toggleMenu();
-            console.log('div clicked');
         });
     }
     toggleMenu(){
