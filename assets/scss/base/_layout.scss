@@ -4,8 +4,8 @@
     &__inner{
         max-width: $max-width;
         margin: auto;
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
     &--scroll-reveal {
         transition: transform 1s, opacity 1s;
@@ -20,7 +20,7 @@
         color: $color-white;
 
         img {
-            max-width: 35rem;
+            max-width: 25rem;
         }
     }
 }
@@ -57,4 +57,30 @@
 .content-mx-35{
     max-width: 35rem;
     margin: auto;
+}
+.d-grid-2{
+    display: grid;
+    grid-template-columns: 1fr;
+    @include smallLaptop {
+        grid-template-columns: 1fr 1fr;
+    };
+    @include largeScreen {
+        grid-template-columns: 1fr 1fr 1fr;
+    };
+    row-gap: 3rem;
+    column-gap: 4rem;
+    justify-content: center;
+    align-items: flex-start;
+    & * {
+        justify-self: center;
+    }
+}
+.d-grid-auto{
+    display: grid;
+    grid-template-columns: 1fr;
+    @include smallLaptop {
+        grid-template-columns: repeat(auto-fit, minmax(1rem, max-content));
+    };
+    row-gap: 2rem;
+    column-gap: 4rem;
 }

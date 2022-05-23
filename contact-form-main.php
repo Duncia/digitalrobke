@@ -48,12 +48,12 @@ wp_mail($to, $subject, $message, $headers);
     <div class="contact-form">
         <div class="contact-form__text">
             <?php if($message_sent): ?>
-                <h2 class="heading heading--2 clr-white pt-md pb-md txt-center">Message sent.</h2>
-                <h2 class="heading heading--2 clr-white pb-md txt-center">Thank you!</h2>
+                <h2 class="heading heading--2 clr-white pt-md pb-md txt-center"><?php the_field('success_message'); ?></h2>
+                <h2 class="heading heading--2 clr-white pb-md txt-center"><?php the_field('thank_you'); ?></h2>
             <?php else: ?>
                 <form method="post" action="" class="main-contact-form" id="main-contact-form" novalidate>
                 <div class="pb-sm">
-                    <label for="main-contact-form__name" id="label-name">Your name</label>
+                    <label for="main-contact-form__name" id="label-name"><?php the_field('name'); ?></label>
                     <label for="main-contact-form__name" id="error-name" class="error-name display-none">Please enter name</label>
                     <input type="text" id="main-contact-form__name" name="main-contact-form__name">
                 </div>

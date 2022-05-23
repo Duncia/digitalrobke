@@ -5,11 +5,11 @@ get_header(); ?>
 <section class="container container--clr pt-md pb-md">
     <div class="container__inner d-flex-2 txt-center">
         <div class="flex-2-child-50">
-            <h2 class="heading heading--2 clr-white pb-md">Pavadinimas</h2>
-            <p class="paragraph clr-white pb-sm">I am web/WordPress developer with a focus to HTML, CSS, JavaScript and functionality (WordPress CMS). I can create or update your website.</p>
+            <h2 class="heading heading--2 clr-white pb-md"><?php the_field('page_info_title'); ?></h2>
+            <p class="paragraph clr-white pb-sm"><?php the_field('page_info_subtitle'); ?></p>
         </div>
         <figure class="flex-2-child-50">
-            <img src="<?php echo get_template_directory_uri() . '/images/cms-edit-content.svg'; ?>" alt="Edit content"/>
+            <img src="<?php the_field('page_info_image'); ?>" alt="Page top image"/>
         </figure>
     </div>
 </section>
