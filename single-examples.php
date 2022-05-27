@@ -1,3 +1,12 @@
+<?php
+/*
+EXAMPLES CUSTOM POST TYPE SINGLE PAGE template.
+
+- Used when Examples custom post is created
+- Includes top banner with title, excerpt and thumbnal from the Example post
+*/
+?>
+
 <?php get_header(); ?>
 
 <?php if (have_posts()) : 

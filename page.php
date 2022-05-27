@@ -1,3 +1,13 @@
+<?php
+/*
+PAGE template.
+
+- Used when not page template is selected
+- Contains header, CTA to contacts section and footer
+- Content wrapped in container__inner class to align max width
+*/
+?>
+
 <?php get_header(); ?>
 
 <main class="container container--page">

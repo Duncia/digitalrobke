@@ -1,5 +1,14 @@
 <?php 
 /* Template Name: Home page */
+
+/*
+HOME PAGE template
+- Static page with Advanced Custom Fields
+- Posibility to select as template in Gutenberg page builder
+- Layout contains 2 parts and 3 parts of content
+- First containers revealed on load with @keyframes, rest container reveal with JavaScript intersection observer API
+- Images URL hardcoded and not allowed to change in the admin panel
+ */
 ?>
 
 <?php get_header(); ?>
@@ -23,18 +32,20 @@
         <h2 class="heading heading--2 pb-md"><?php the_field('intro_title'); ?></h2>
         <p class="paragraph content-mx-60  home-page-el home-page-el--reveal"><?php the_field('intro_subtitle'); ?></p>
     </div>
-    <div class="container_inner d-flex-2 txt-center container--bg-grey pt-md pb-md">
-        <div class="flex-2-child-50">
-            <figure class="image-bckgrd home-page-el home-page-el--reveal">
-                <img src="<?php echo get_template_directory_uri() . '/images/cms-edit-content.svg'; ?>" alt="Edit content"/>
-            </figure>
-        </div>
-        <div class="flex-2-child-50 home-page-el home-page-el--reveal">
-            <h3 class="heading heading--3 pt-sm pb-sm"><?php the_field('title_cms'); ?></h3>
-            <p class="paragraph"><?php the_field('content_cms'); ?></p>
+    <div class="container--bg-grey pt-md pb-md">
+        <div class="container__inner d-flex-2 txt-center ">
+            <div class="flex-2-child-50">
+                <figure class="image-bckgrd home-page-el home-page-el--reveal">
+                    <img src="<?php echo get_template_directory_uri() . '/images/cms-edit-content.svg'; ?>" alt="Edit content"/>
+                </figure>
+            </div>
+            <div class="flex-2-child-50 home-page-el home-page-el--reveal">
+                <h3 class="heading heading--3 pt-sm pb-sm"><?php the_field('title_cms'); ?></h3>
+                <p class="paragraph"><?php the_field('content_cms'); ?></p>
+            </div>
         </div>
     </div>
-    <div class="container_inner d-flex-2 txt-center pt-md pb-md">
+    <div class="container__inner d-flex-2 txt-center pt-md pb-md">
         <div class="flex-2-child-50 home-page-el home-page-el--reveal">
             <h3 class="heading heading--3 pt-sm pb-sm"><?php the_field('title_functions'); ?></h3>
             <p class="paragraph"><?php the_field('content_functions'); ?></p>
@@ -53,7 +64,7 @@
             </figure>
         </div>
     </div>
-    <div class="container_inner txt-center pb-lr home-page-el home-page-el--reveal">
+    <div class="container__inner txt-center pb-lr home-page-el home-page-el--reveal">
         <a class="btn btn--purple" href="<?php the_field('url_check_examples'); ?>"><?php the_field('btn_check_examples'); ?></a>
     </div>
 </section>

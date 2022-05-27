@@ -1,7 +1,16 @@
 <?php 
 /* Template Name: Info / inner */
 
-get_header(); ?>
+/*
+INFORMATION OR INNER PAGE template.
+
+- Used as page template for information about dev stack, FAQ etc.
+- Contains header, CTA to contacts section and footer
+- Top section needs content and image - Advanced Custom Fields used
+*/
+?>
+
+<?php get_header(); ?>
 <section class="container container--clr pt-md pb-md">
     <div class="container__inner d-flex-2 txt-center">
         <div class="flex-2-child-50">

@@ -1,6 +1,15 @@
 <?php 
 /* Template Name: Contact form page */
 
+/*
+CONTACT PAGE template
+
+- Includes contact form HTML part
+- Includes basic PHP email send function
+- JS/CSS is loaded separately to this page
+*/
+
+
 $subjectPreText = __('New message: ', 'websitewizards');
 $mainHeader = __('Message from WebsiteWizards!', 'websitewizards');
 $bodyFrom = __('From', 'websitewizards');
@@ -54,22 +63,22 @@ wp_mail($to, $subject, $message, $headers);
                 <form method="post" action="" class="main-contact-form" id="main-contact-form" novalidate>
                 <div class="pb-sm">
                     <label for="main-contact-form__name" id="label-name"><?php the_field('name'); ?></label>
-                    <label for="main-contact-form__name" id="error-name" class="error-name display-none">Please enter name</label>
+                    <label for="main-contact-form__name" id="error-name" class="error-name display-none"><?php the_field('please_enter_name'); ?></label>
                     <input type="text" id="main-contact-form__name" name="main-contact-form__name">
                 </div>
                 <div class="pb-sm">
-                    <label for="main-contact-form__email" id="label-email">Your email</label>
-                    <label for="main-contact-form__name" id="error-email" class="error-name display-none">Please enter valid email</label>
+                    <label for="main-contact-form__email" id="label-email"><?php the_field('your-email'); ?></label>
+                    <label for="main-contact-form__name" id="error-email" class="error-name display-none"><?php the_field('please_enter_valid_email'); ?></label>
                     <input type="email" id="main-contact-form__email" name="main-contact-form__email">
                 </div>
                 <div class="pb-sm">
-                    <label for="main-contact-form__message" id="label-message">Your message</label>
-                    <label for="main-contact-form__name" id="error-message" class="error-name display-none">Please write your message</label>
+                    <label for="main-contact-form__message" id="label-message"><?php the_field('your_message'); ?></label>
+                    <label for="main-contact-form__name" id="error-message" class="error-name display-none"><?php the_field('please_write_your_message'); ?></label>
                     <textarea rows="4" id="main-contact-form__message" name="main-contact-form__message"></textarea>
                 </div>
                 <input type="text" id="webwizcontactformhoneypot" name="webwizcontactformhoneypot"/>
                 <div class="pb-sm txt-center">
-                    <button class="btn btn--white" id="main-contact-form__submit" type="submit" name="send">Send</button>
+                    <button class="btn btn--white" id="main-contact-form__submit" type="submit" name="send"><?php the_field('send'); ?></button>
                 </div>
             </form>
             <?php endif; ?>  

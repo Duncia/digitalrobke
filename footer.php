@@ -1,36 +1,18 @@
-    <footer class="container <?php if(isset($args['class'])) { echo ($args['class']);};?> footer container--scroll-reveal">
+<?php
+/*
+Website FOOTER part.
+
+- Includes wp_footer() function
+- Footer menu and some basic static content
+*/
+?>
+
+<footer class="container <?php if(isset($args['class'])) { echo ($args['class']);};?> footer container--scroll-reveal">
         <div class="container__inner pt-md">
             <nav class="footer__nav">
                 <?php $args_footer = array(
                     'theme_location' => 'footer-meniu');
                     wp_nav_menu($args_footer); ?>
-                <!--
-                <ul>
-                    <li>
-                        <a href="">All examples</a>
-                        <ul class="sub-menu">
-                            <li><a href="">CMS</a></li>
-                            <li><a href="">Content</a></li>
-                            <li><a href="">Forms</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="">Home page</a>
-                        <ul class="sub-menu">
-                            <li><a href="">General FAQ</a></li>
-                            <li><a href="">Dev stack & processes</a></li>
-                            <li><a href="">Regular cooperation</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="">Contacts</a>
-                        <ul class="sub-menu">
-                            <li><a href="">About me</a></li>
-                            <li><a href="">Blog</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                -->
             </nav>
         </div>
         <div class="container__inner pb-md">

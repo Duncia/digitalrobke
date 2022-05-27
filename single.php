@@ -1,3 +1,12 @@
+<?php
+/*
+SINGLE POST template.
+
+- Used when not post template is selected
+- Contains header, CTA to contacts section and footer
+- Content wrapped in container__inner class to align max width
+*/
+?>
 <?php get_header(); ?>
 
 <main class="container--page pt-md pb-md">   

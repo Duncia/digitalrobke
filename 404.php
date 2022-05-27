@@ -1,3 +1,11 @@
+<?php
+/*
+Basic 404 page template
+
+- Few strings ready for translations
+*/
+?>
+
 <?php get_header(); ?>
     <section class="container">
         <div class="container__inner txt-center pt-md pb-md">
