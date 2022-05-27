@@ -1,7 +1,5 @@
 Example website with my own WordPress Custom Theme.
 
-Live version here: https://websitewizards.eu/
-
 Stack:
 1. HTML (semantic elements like figure, example of data attributes, srcset etc.)
 2. SCSS/CSS (grid/flex layout, hovers, @keyframes, nesting, mixin, variable examples)
