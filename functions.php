@@ -8,7 +8,7 @@ function webwizards_setup(){
     //Support for Woocommerce
     add_theme_support('woocommerce');
     //Load translations in languages folder
-    load_theme_textdomain( 'websitewizards', get_template_directory() . '/languages' );
+    load_theme_textdomain( 'digitalrobke', get_template_directory() . '/languages' );
     //Register menu
     register_nav_menu('header-meniu', 'Header');
     register_nav_menu('footer-meniu', 'Footer');

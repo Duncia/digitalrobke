@@ -21,8 +21,8 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 <section class="container container--clr">
     <div class="container__inner pt-md pb-md txt-center">
-        <h2 class="heading heading--2 clr-white pb-sm"><?php _e('Note: just an example!', 'websitewizards'); ?></h2>
-        <p class="paragraph clr-white pb-sm"><?php _e('Not a real shop - contact me if one is needed!', 'websitewizards'); ?></p>
+        <h2 class="heading heading--2 clr-white pb-sm"><?php _e('Note: just an example!', 'digitalrobke'); ?></h2>
+        <p class="paragraph clr-white pb-sm"><?php _e('Not a real shop - contact me if one is needed!', 'digitalrobke'); ?></p>
     </div>
 </section>
 

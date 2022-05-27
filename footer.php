@@ -17,11 +17,11 @@ Website FOOTER part.
         </div>
         <div class="container__inner pb-md">
             <div class="footer__text pb-sm">
-                <p><?php _e('This is example webpage. Scroll and click around to see various parts of it, check <a href="https://github.com/Duncia/websitewizards" target="_blank">GitHub</a> repository for code or use contact form for any questions.', 'websitewizards'); ?></p>
+                <p><?php _e('This is example webpage. Scroll and click around to see various parts of it, check <a href="https://github.com/Duncia/digitalrobke" target="_blank">GitHub</a> repository for code or use contact form for any questions.', 'digitalrobke'); ?></p>
             </div>
             <div class="footer__text pb-sm">
-                <p><?php _e('Robertas Dunčia', 'websitewizards'); ?></p>
-                <p><?php _e('WordPress/web developer, webmaster', 'websitewizards'); ?></p>
+                <p><?php _e('Robertas Dunčia', 'digitalrobke'); ?></p>
+                <p><?php _e('WordPress/web developer, webmaster', 'digitalrobke'); ?></p>
             </div>
             <div class="footer__icons">
                 <div class="footer-svg">
@@ -50,7 +50,7 @@ Website FOOTER part.
                     </a>
                 </div>
                 <div class="footer-svg">
-                    <a href="https://github.com/Duncia/websitewizards" target="_blank">
+                    <a href="https://github.com/Duncia/digitalrobke" target="_blank">
                         <svg class="footer-icon__github" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <g>
                                 <path fill="none" d="M0 0h24v24H0z"/>

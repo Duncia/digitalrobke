@@ -23,5 +23,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 <a class="checkout-button button alt wc-forward">
-	<?php  _e('EXAMPLE - no purchase possible', 'websitewizards'); ?>
+	<?php  _e('EXAMPLE - no purchase possible', 'digitalrobke'); ?>
 </a>

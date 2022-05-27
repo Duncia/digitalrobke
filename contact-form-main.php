@@ -10,11 +10,11 @@ CONTACT PAGE template
 */
 
 
-$subjectPreText = __('New message: ', 'websitewizards');
-$mainHeader = __('Message from WebsiteWizards!', 'websitewizards');
-$bodyFrom = __('From', 'websitewizards');
-$bodyEmail = __('Email', 'websitewizards');
-$bodyTextMain = __('Message text', 'websitewizards');
+$subjectPreText = __('New message: ', 'digitalrobke');
+$mainHeader = __('Message from digitalrobke!', 'digitalrobke');
+$bodyFrom = __('From', 'digitalrobke');
+$bodyEmail = __('Email', 'digitalrobke');
+$bodyTextMain = __('Message text', 'digitalrobke');
 
 $headers = 'Content-type: text/html';
 $name = '';
@@ -31,7 +31,7 @@ if(isset($_POST['send'])){
     $message = '<div style="text-align: center; background-color: #481a72; color: #fff; padding: 50px 20px; box-sizing: boder-box;"><p style="font-size: 20px; text-transform: uppercase; font-weight: 600; padding-bottom: 20px;">'. $mainHeader.'</p><div style="background-color: #fff; padding: 20px; color: #000; max-width: 500px; margin: auto; text-align: left;">';
     $message .= '<p style="font-size: 18px;">'.$bodyFrom.': ' . $name . '</p>';
     $message .= '<p style="font-size: 18px;">'.$bodyEmail.': ' . $email . '</p>';
-    $message .= '<p>'.$bodyTextMain.': ' . $messageText . '</p></div><p><a style="color: #fff !important;">https://websitewizards.eu/</a></p></div>';
+    $message .= '<p>'.$bodyTextMain.': ' . $messageText . '</p></div><p><a style="color: #fff !important;">https://digitalrobke.eu/</a></p></div>';
 
     $message_sent = true;
 }

@@ -1,7 +1,7 @@
 {
-  "name": "websitewizards",
+  "name": "digitalrobke",
   "version": "1.0.0",
-  "description": "WebsiteWizards WP theme JSON",
+  "description": "DigitalRobke WP theme JSON",
   "main": "index.js",
   "scripts": {
     "build": "wp-scripts build",
