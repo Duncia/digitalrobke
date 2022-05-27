@@ -1,6 +1,10 @@
     <footer class="container <?php if(isset($args['class'])) { echo ($args['class']);};?> footer container--scroll-reveal">
         <div class="container__inner pt-md">
             <nav class="footer__nav">
+                <?php $args_footer = array(
+                    'theme_location' => 'footer-meniu');
+                    wp_nav_menu($args_footer); ?>
+                <!--
                 <ul>
                     <li>
                         <a href="">All examples</a>
@@ -26,15 +30,16 @@
                         </ul>
                     </li>
                 </ul>
+                -->
             </nav>
         </div>
         <div class="container__inner pb-md">
             <div class="footer__text pb-sm">
-                <p><?php _e('This is example webpage. Scroll and click around to see various parts of it, check GitHub repository for code or use contact form for any questions.', 'websitewizards'); ?></p>
+                <p><?php _e('This is example webpage. Scroll and click around to see various parts of it, check <a href="https://github.com/Duncia/websitewizards" target="_blank">GitHub</a> repository for code or use contact form for any questions.', 'websitewizards'); ?></p>
             </div>
             <div class="footer__text pb-sm">
                 <p><?php _e('Robertas Dunčia', 'websitewizards'); ?></p>
-                <p><?php _e('Front-end web/WordPress developer', 'websitewizards'); ?></p>
+                <p><?php _e('WordPress/web developer, webmaster', 'websitewizards'); ?></p>
             </div>
             <div class="footer__icons">
                 <div class="footer-svg">

@@ -9,6 +9,7 @@ class MobileMenu {
         this.mobileMenuDiv = document.querySelector("#burger");
         this.mobileMenuIcon = document.querySelector("#burger__middle");
         this.mobileMenuClose = document.querySelector("#mobile-menu");
+        this.mobileLogo = document.querySelector("#mobile-menu-open-logo");
         this.events();
     }
 
@@ -20,6 +21,8 @@ class MobileMenu {
     toggleMenu(){
         this.mobileMenuIcon.classList.toggle("header__burger__middle--active");
         this.mobileMenuClose.classList.toggle("mobile-menu--close");
+        this.mobileMenuIcon.classList.toggle("header__burger__middle--open");
+        this.mobileLogo.classList.toggle("mobile-menu-open-logo--hide");
     }
 }
 

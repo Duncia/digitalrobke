@@ -1,5 +1,5 @@
 .footer{
-    background-color: $color-purple;
+    background-color: $color-grey;
     color: $color-white;
 
     &__nav {
@@ -32,6 +32,11 @@
         text-align: justify;
         max-width: 30rem;
         font-size: 1.2rem; 
+
+        a{
+            text-decoration: underline;
+            font-weight: 600;
+        }
     }
 
 }

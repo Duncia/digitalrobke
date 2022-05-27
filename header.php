@@ -12,13 +12,18 @@
             <div class="header__left">
                 <div class="header__logo">
                     <a href="<?php echo get_home_url(); ?>">
-                        <img src="<?php echo get_template_directory_uri() . '/images/logo-website-wizards.svg'; ?>" alt="Website Wizards Logo">
+                        <img src="<?php echo get_template_directory_uri() . '/images/logo.svg'; ?>" alt="Website Wizards Logo">
                     </a>
                 </div>
                 <div class="header__language-switcher">
+                    <?php $args_language_switcher_header = array(
+                    'theme_location' => 'header-language-switcher');
+                    wp_nav_menu($args_language_switcher_header); ?>
+                    <!--
                     <ul>
                         <li>LT</li>
                     </ul>
+                    -->
                 </div>
             </div>
             <div class="header__burger" id="burger">
@@ -26,6 +31,10 @@
                 </div>
             <div class="header__menu" id="header-menu">
                 <nav class="navigation-top">
+                    <?php $args = array(
+                    'theme_location' => 'header-meniu');
+                    wp_nav_menu($args); ?>
+                    <!--
                     <ul>
                         <li>
                             Examples
@@ -46,11 +55,14 @@
                         <li><a href="">Contacts</a></li>
                         <li class="li-shop-desktop"><a href="">Shop</a></li>
                     </ul>
+                    -->
                 </nav>
             </div>
         </div>
         <div class="mobile-menu mobile-menu--close" id="mobile-menu">
             <nav class="mobile-menu__nav">
+                <?php wp_nav_menu($args); ?>
+                <!--
                 <ul>
                     <li>
                         <a href="">All examples</a>
@@ -69,6 +81,11 @@
                     <li><a href="">Contacts</a></li>
                     <li><a href="">Shop</a></li>
                 </ul>
+                -->
             </nav>
         </div>
+        <div class="mobile-menu-open-logo mobile-menu-open-logo--hide" id="mobile-menu-open-logo">
+            <img src="<?php echo get_template_directory_uri() . '/images/logo-mobile.svg'; ?>" alt="Website Wizards Logo">
+        </div>
+
     </header>

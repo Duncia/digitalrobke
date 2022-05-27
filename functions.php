@@ -4,9 +4,15 @@ function webwizards_setup(){
     //Title in the tab of every page
     add_theme_support('title-tag');
     //Enabling thumbnails
-    add_theme_support( 'post-thumbnails' );
+    add_theme_support('post-thumbnails');
+    //Support for Woocommerce
+    add_theme_support('woocommerce');
     //Load translations in languages folder
     load_theme_textdomain( 'websitewizards', get_template_directory() . '/languages' );
+    //Register menu
+    register_nav_menu('header-meniu', 'Header');
+    register_nav_menu('footer-meniu', 'Footer');
+    register_nav_menu('header-language-switcher', 'Header Language Switcher');
 }
 add_action('after_setup_theme', 'webwizards_setup');
 
@@ -33,3 +39,9 @@ function cc_mime_types($mimes) {
     return $mimes;
   }
 add_filter('upload_mimes', 'cc_mime_types');
+
+//Woocommerce changes
+function remove_product_image_link( $html, $post_id ) {
+  return preg_replace( "!<(a|/a).*?>!", '', $html );
+}
+add_filter( 'woocommerce_single_product_image_thumbnail_html', 'remove_product_image_link', 10, 2 );

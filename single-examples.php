@@ -4,11 +4,12 @@
     while (have_posts()) : the_post();?>
 
 <section class="container single-example__banner">
-    <div class="container__inner d-flex-2 txt-center pt-md pb-md">
+    <div class="container__inner d-flex-2 pt-md pb-md">
         <div class="flex-2-child-50">
             <h3 class="heading heading--3 clr-white pb-sm"><?php the_title(); ?></h3>
+            <p class="paragraph clr-white pb-sm"><?php echo get_the_excerpt(); ?></p>
         </div>
-        <figure class="flex-2-child-50">
+        <figure class="flex-2-child-50 txt-center">
             <?php if ( has_post_thumbnail() ) {the_post_thumbnail();}?>
         </figure>
     </div>

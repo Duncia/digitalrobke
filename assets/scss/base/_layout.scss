@@ -17,11 +17,15 @@
 
     &--clr{
         background-color: $color-purple;
+        background-image: linear-gradient(135deg, $color-purple, #725786);
         color: $color-white;
 
         img {
             max-width: 25rem;
         }
+    }
+    &--bg-grey{
+        background-color: $color-grey-bg;
     }
 }
 .d-flex-space-btwn {
@@ -36,9 +40,9 @@
     justify-content: center;
     align-items: center;
     &--rev{
-        flex-direction: column-reverse;
+        order: -1;
         @include smallLaptop {
-            flex-direction: row;
+            order: 2;
         };
     }
 }
