@@ -20,5 +20,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 ?>
-<section class="container container--page woo-website-wizards">
+<section class="container container--page woo-digitalrobke">
 	<div class="container__inner">

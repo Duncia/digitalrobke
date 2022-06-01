@@ -14,11 +14,17 @@ INFORMATION OR INNER PAGE template.
 <section class="container container--clr pt-md pb-md">
     <div class="container__inner d-flex-2 txt-center">
         <div class="flex-2-child-50">
-            <h2 class="heading heading--2 clr-white pb-md"><?php the_field('page_info_title'); ?></h2>
-            <p class="paragraph clr-white pb-sm"><?php the_field('page_info_subtitle'); ?></p>
+            <?php if(get_field('page_info_title')): ?>
+                <h2 class="heading heading--2 clr-white pb-md"><?php the_field('page_info_title'); ?></h2>
+            <?php endif; ?>
+            <?php if(get_field('page_info_subtitle')): ?>
+                <p class="paragraph clr-white pb-sm"><?php the_field('page_info_subtitle'); ?></p>
+            <?php endif; ?>
         </div>
         <figure class="flex-2-child-50">
-            <img src="<?php the_field('page_info_image'); ?>" alt="Page top image"/>
+            <?php if(get_field('page_info_image')): ?>
+                <img src="<?php the_field('page_info_image'); ?>" alt="Page top image"/>
+            <?php endif; ?>
         </figure>
     </div>
 </section>

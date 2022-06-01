@@ -26,8 +26,8 @@ Sorry for that and please do not analyze this file.
     aspect-ratio: 1/1;
     object-fit: cover;
 }
-.woocommerce .woo-website-wizards ul.products {
-    .woo-website-wizards-custom-archive-product{
+.woocommerce .woo-digitalrobke ul.products {
+    .woo-digitalrobke-custom-archive-product{
         .size-woocommerce_thumbnail {
             aspect-ratio: 1 / 1;
             object-fit: cover;
@@ -62,7 +62,7 @@ Sorry for that and please do not analyze this file.
     }
 }
 
-.woo-website-wizards-single-cart{
+.woo-digitalrobke-single-cart{
 
     button.single_add_to_cart_button.button.alt{
         text-decoration: none;
@@ -85,12 +85,12 @@ Sorry for that and please do not analyze this file.
             }
     }
 }
-.woo-website-wizards-short-description{
+.woo-digitalrobke-short-description{
     h1, h2, h3, h4, h5, h6, p {
         font-family: 'Courier Prime', monospace;
     }
 }
-.woo-website-wizards-product-meta span{
+.woo-digitalrobke-product-meta span{
     font-size: 1.5rem;
 }
 .woocommerce div.product .woocommerce-tabs ul.tabs li a {
@@ -107,7 +107,7 @@ Sorry for that and please do not analyze this file.
         margin-bottom: 2rem;
     }
 }
-.woocommerce .woo-website-wizards .related ul.products li.woo-website-wizards-custom-archive-product .button {
+.woocommerce .woo-digitalrobke .related ul.products li.woo-digitalrobke-custom-archive-product .button {
     display: none;
 }
 .woocommerce-message{

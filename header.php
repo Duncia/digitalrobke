@@ -21,13 +21,15 @@ Website HEADER part.
             <div class="header__left">
                 <div class="header__logo">
                     <a href="<?php echo get_home_url(); ?>">
-                        <img src="<?php echo get_template_directory_uri() . '/images/logo.svg'; ?>" alt="Website Wizards Logo">
+                        <img width="184" height="78" src="<?php echo get_template_directory_uri() . '/images/logo.svg'; ?>" alt="Logo">
                     </a>
                 </div>
                 <div class="header__language-switcher">
-                    <?php $args_language_switcher_header = array(
-                    'theme_location' => 'header-language-switcher');
-                    wp_nav_menu($args_language_switcher_header); ?>
+                    <ul>
+                        <?php if(get_field('language') && get_field('language_url')): ?>
+                            <li><a href="<?php the_field('language_url'); ?>"><?php the_field('language'); ?></a></li>
+                        <?php endif; ?>
+                    </ul>
                 </div>
             </div>
             <div class="header__burger" id="burger">
@@ -44,10 +46,15 @@ Website HEADER part.
         <div class="mobile-menu mobile-menu--close" id="mobile-menu">
             <nav class="mobile-menu__nav">
                 <?php wp_nav_menu($args); ?>
+                <ul>
+                <?php if(get_field('language') && get_field('language_url')): ?>
+                    <li><a href="<?php the_field('language_url'); ?>"><?php the_field('language'); ?></a></li>
+                <?php endif; ?>
+                </ul>
             </nav>
         </div>
         <div class="mobile-menu-open-logo mobile-menu-open-logo--hide" id="mobile-menu-open-logo">
-            <img src="<?php echo get_template_directory_uri() . '/images/logo-mobile.svg'; ?>" alt="Website Wizards Logo">
+            <img width="184" height="78" src="<?php echo get_template_directory_uri() . '/images/logo-mobile.svg'; ?>" alt="Logo">
         </div>
 
     </header>

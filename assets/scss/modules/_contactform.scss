@@ -12,9 +12,11 @@
     box-shadow: 0 2.4rem 4.8rem rgb(0 0 0 / 15%);
     display: grid;
     grid-template-columns: 1fr;
+    row-gap: 2rem;
     align-items: center;
     @include smallLaptop {
         grid-template-columns: 3fr 2fr;
+        column-gap: 2rem;
     };
 
     &__img {
@@ -66,7 +68,7 @@
 .display-none{
     display: none !important;
 }
-#webwizcontactformhoneypot{
+#digitalrcontactformhoneypot{
     display: none;
 }
 

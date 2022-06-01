@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 global $product;
 ?>
-<div class="product_meta woo-website-wizards-product-meta">
+<div class="product_meta woo-digitalrobke-product-meta">
 
 	<?php do_action( 'woocommerce_product_meta_start' ); ?>
 

@@ -21,7 +21,7 @@ $name = '';
 $to = 'robertas.duncia@gmail.com';
 $message = '';
 $message_sent = false;
-if(!empty($_POST['webwizcontactformhoneypot'])) die();
+if(!empty($_POST['digitalrcontactformhoneypot'])) die();
 
 if(isset($_POST['send'])){
     //Sanitize the data
@@ -31,7 +31,7 @@ if(isset($_POST['send'])){
     $message = '<div style="text-align: center; background-color: #481a72; color: #fff; padding: 50px 20px; box-sizing: boder-box;"><p style="font-size: 20px; text-transform: uppercase; font-weight: 600; padding-bottom: 20px;">'. $mainHeader.'</p><div style="background-color: #fff; padding: 20px; color: #000; max-width: 500px; margin: auto; text-align: left;">';
     $message .= '<p style="font-size: 18px;">'.$bodyFrom.': ' . $name . '</p>';
     $message .= '<p style="font-size: 18px;">'.$bodyEmail.': ' . $email . '</p>';
-    $message .= '<p>'.$bodyTextMain.': ' . $messageText . '</p></div><p><a style="color: #fff !important;">https://digitalrobke.eu/</a></p></div>';
+    $message .= '<p>'.$bodyTextMain.': ' . $messageText . '</p></div><p><a style="color: #fff !important;">https://digitalrobke.com/</a></p></div>';
 
     $message_sent = true;
 }
@@ -47,8 +47,9 @@ wp_mail($to, $subject, $message, $headers);
         
         <?php if (have_posts()) :
             while (have_posts()) : the_post();?>
-
-            <?php the_content(); ?>
+            <div class="content-mx-60">
+                <?php the_content(); ?>
+            </div>
         <?php endwhile;
         else :
             echo 'Nothing to show.';
@@ -57,34 +58,52 @@ wp_mail($to, $subject, $message, $headers);
     <div class="contact-form">
         <div class="contact-form__text">
             <?php if($message_sent): ?>
-                <h2 class="heading heading--2 clr-white pt-md pb-md txt-center"><?php the_field('success_message'); ?></h2>
-                <h2 class="heading heading--2 clr-white pb-md txt-center"><?php the_field('thank_you'); ?></h2>
+                <?php if(get_field('success_message')): ?>
+                    <h2 class="heading heading--2 clr-white pt-md pb-md txt-center"><?php the_field('success_message'); ?></h2>
+                <?php endif; ?>
+                <?php if(get_field('thank_you')): ?>
+                    <h2 class="heading heading--2 clr-white pb-md txt-center"><?php the_field('thank_you'); ?></h2>
+                <?php endif; ?>
             <?php else: ?>
                 <form method="post" action="" class="main-contact-form" id="main-contact-form" novalidate>
                 <div class="pb-sm">
-                    <label for="main-contact-form__name" id="label-name"><?php the_field('name'); ?></label>
-                    <label for="main-contact-form__name" id="error-name" class="error-name display-none"><?php the_field('please_enter_name'); ?></label>
+                    <?php if(get_field('name')): ?>
+                        <label for="main-contact-form__name" id="label-name"><?php the_field('name'); ?></label>
+                    <?php endif; ?>
+                    <?php if(get_field('please_enter_name')): ?>
+                        <label for="main-contact-form__name" id="error-name" class="error-name display-none"><?php the_field('please_enter_name'); ?></label>
+                    <?php endif; ?>
                     <input type="text" id="main-contact-form__name" name="main-contact-form__name">
                 </div>
                 <div class="pb-sm">
-                    <label for="main-contact-form__email" id="label-email"><?php the_field('your-email'); ?></label>
-                    <label for="main-contact-form__name" id="error-email" class="error-name display-none"><?php the_field('please_enter_valid_email'); ?></label>
+                    <?php if(get_field('your_email')): ?>
+                        <label for="main-contact-form__email" id="label-email"><?php the_field('your_email'); ?></label>
+                    <?php endif; ?>
+                    <?php if(get_field('please_enter_valid_email')): ?>
+                        <label for="main-contact-form__name" id="error-email" class="error-name display-none"><?php the_field('please_enter_valid_email'); ?></label>
+                    <?php endif; ?>
                     <input type="email" id="main-contact-form__email" name="main-contact-form__email">
                 </div>
                 <div class="pb-sm">
-                    <label for="main-contact-form__message" id="label-message"><?php the_field('your_message'); ?></label>
-                    <label for="main-contact-form__name" id="error-message" class="error-name display-none"><?php the_field('please_write_your_message'); ?></label>
+                    <?php if(get_field('your_message')): ?>
+                        <label for="main-contact-form__message" id="label-message"><?php the_field('your_message'); ?></label>
+                    <?php endif; ?>
+                    <?php if(get_field('please_write_your_message')): ?>
+                        <label for="main-contact-form__name" id="error-message" class="error-name display-none"><?php the_field('please_write_your_message'); ?></label>
+                    <?php endif; ?>
                     <textarea rows="4" id="main-contact-form__message" name="main-contact-form__message"></textarea>
                 </div>
-                <input type="text" id="webwizcontactformhoneypot" name="webwizcontactformhoneypot"/>
+                <input type="text" id="digitalrcontactformhoneypot" name="digitalrcontactformhoneypot"/>
                 <div class="pb-sm txt-center">
-                    <button class="btn btn--white" id="main-contact-form__submit" type="submit" name="send"><?php the_field('send'); ?></button>
+                    <?php if(get_field('send')): ?>
+                        <button class="btn btn--white" id="main-contact-form__submit" type="submit" name="send"><?php the_field('send'); ?></button>
+                    <?php endif; ?>
                 </div>
             </form>
             <?php endif; ?>  
         </div>
         <figure class="contact-form__img">
-            <img src="<?php echo get_template_directory_uri() . '/images/new-email.svg'; ?>" alt="Edit content"/>
+            <img src="<?php echo get_template_directory_uri() . '/images/post-message.svg'; ?>" alt="Edit content"/>
         </figure>
     </div>
     </section>
