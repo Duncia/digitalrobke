@@ -23,7 +23,7 @@ INFORMATION OR INNER PAGE template.
         </div>
         <figure class="flex-2-child-50">
             <?php if(get_field('page_info_image')): ?>
-                <img src="<?php the_field('page_info_image'); ?>" alt="Page top image"/>
+                <img class="shadow" src="<?php the_field('page_info_image'); ?>"/>
             <?php endif; ?>
         </figure>
     </div>

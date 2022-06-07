@@ -29,9 +29,15 @@ get_header( 'shop' );
 do_action( 'woocommerce_before_main_content' );
 
 ?>
-<header class="woocommerce-products-header">
+<header class="woocommerce-products-header pb-md txt-center">
 	<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
 		<h1 class="heading heading--1 clr-purple pb-md"><?php _e('Shop - just an example!', 'digitalrobke'); ?></h1>
+		<p class="paragraph pb-md content-mx-60"><?php _e('You cannot buy anything, but similar shop page with products and shopping cart on WooCommerce can be developed and integrated in the website.', 'digitalrobke'); ?></p>
+		<section class="container container--clr txt-center">
+			<div class="container__inner pt-sm pb-sm">
+				<img width="600" height="360" src="<?php echo get_template_directory_uri() . '/images/shop-hero.svg'; ?>" alt="Shop"/>
+			</div>
+		</section>
 	<?php endif; ?>
 
 	<?php

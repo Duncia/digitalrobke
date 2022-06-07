@@ -24,7 +24,8 @@ if ( ! empty( $breadcrumb ) ) {
 
 	//echo $wrap_before;
 	echo '<div class="woo-custom-breadcrumbs">';
-
+	echo '<p><a href="https://digitalrobke.com/shop/">SHOP MAIN PAGE</a> | <a href="https://digitalrobke.com/cart/">CART</a></p>';
+	/*
 	foreach ( $breadcrumb as $key => $crumb ) {
 
 		echo $before;
@@ -41,6 +42,7 @@ if ( ! empty( $breadcrumb ) ) {
 			echo '<p>&nbsp;/&nbsp;</p>';
 		}
 	}
+	*/
 
 	//echo $wrap_after;
 	echo '</div>';

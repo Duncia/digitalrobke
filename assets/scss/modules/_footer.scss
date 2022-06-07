@@ -15,9 +15,9 @@
             };
 
             li {
-                font-size: 1.6rem;
+                font-size: 2rem;
                 @include smallLaptop {
-                    font-size: 1.4rem;
+                    font-size: 1.6rem;
                 };
                 margin-bottom: 3rem;
                 a:hover{
@@ -31,7 +31,7 @@
         font-family: 'Courier Prime', monospace;
         text-align: justify;
         max-width: 30rem;
-        font-size: 1.2rem; 
+        font-size: 1.4rem; 
 
         a{
             text-decoration: underline;

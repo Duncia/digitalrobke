@@ -24,13 +24,46 @@ EXAMPLES CUSTOM POST TYPE SINGLE PAGE template.
     </div>
 </section>
 <main class="container--page pt-md pb-md">   
-    <section class="container__inner">
+    <section class="container__inner single_sidebar">
+        <article class="content-mx-60">
             <?php the_content(); ?>
+        </article>
+        <aside>
+            <h4 class="txt-center"><?php  _e('Other examples', 'digitalrobke'); ?></h4>
+            <div class="sidebar__items">
+                <?php //WP_Query for other examples
+                $args = array(
+                    'post_type' => 'examples',
+                    'post_status' => 'publish',
+                    'posts_per_page' => '3',
+                    'orderby' => 'date',
+                    'post__not_in' => [$post->ID]
+                );
+                $exampleLoop = new WP_Query($args);
+                if($exampleLoop->have_posts()){
+                    while($exampleLoop->have_posts()) {
+                        $exampleLoop->the_post(); ?>
+                            <div class="txt-center pb-lr">
+                                <a href="<?php the_permalink(); ?>">
+                                    <p><?php the_title(); ?></p>
+                                    <?php if ( has_post_thumbnail() ) {the_post_thumbnail('medium');}?>
+                                </a>
+                            </div>
+                        <?php
+                    }
+                } else {
+                    _e('No examples yet.', 'digitalrobke');
+                };
+                wp_reset_postdata();
+                ?>
+            </div>
+        </aside>
         <?php endwhile;
         else :
             echo 'Nothing to show.';
         endif;
         ?>
+
     </section>
 </main>
 

@@ -21,7 +21,7 @@ $name = '';
 $to = 'robertas.duncia@gmail.com';
 $message = '';
 $message_sent = false;
-if(!empty($_POST['digitalrcontactformhoneypot'])) die();
+if(!empty($_POST['website'])) die();
 
 if(isset($_POST['send'])){
     //Sanitize the data
@@ -66,6 +66,7 @@ wp_mail($to, $subject, $message, $headers);
                 <?php endif; ?>
             <?php else: ?>
                 <form method="post" action="" class="main-contact-form" id="main-contact-form" novalidate>
+                <input type="text" id="website" name="website" autocomplete="off"/>
                 <div class="pb-sm">
                     <?php if(get_field('name')): ?>
                         <label for="main-contact-form__name" id="label-name"><?php the_field('name'); ?></label>
@@ -93,7 +94,6 @@ wp_mail($to, $subject, $message, $headers);
                     <?php endif; ?>
                     <textarea rows="4" id="main-contact-form__message" name="main-contact-form__message"></textarea>
                 </div>
-                <input type="text" id="digitalrcontactformhoneypot" name="digitalrcontactformhoneypot"/>
                 <div class="pb-sm txt-center">
                     <?php if(get_field('send')): ?>
                         <button class="btn btn--white" id="main-contact-form__submit" type="submit" name="send"><?php the_field('send'); ?></button>

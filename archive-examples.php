@@ -25,7 +25,7 @@ EXAMPLES CUSTOM POST TYPE archive page
 </section>
 <section class="container txt-center pt-md">
     <div class="container__inner">
-        <p class="paragraph content-mx-60"><?php _e('In this page I will try to show you various website parts like forms, admin environment elements and samples of code/functions.', 'digitalrobke'); ?></p>
+        <p class="paragraph content-mx-60"><?php _e('In this page I will try to shortly introduce various website parts like forms, admin environment elements and samples of code/functions.', 'digitalrobke'); ?></p>
     </div>
 </section>
 

@@ -32,6 +32,7 @@ Sorry for that and please do not analyze this file.
             aspect-ratio: 1 / 1;
             object-fit: cover;
             background-color: $color-grey-bg;
+            max-width: 22rem;
         }
         a h2.woocommerce-loop-product__title{
             font-size: 2.5rem;
@@ -129,4 +130,11 @@ Sorry for that and please do not analyze this file.
 }
 .return-to-shop{
     margin: 2rem 0rem !important;
+}
+.woocommerce a.added_to_cart{
+    display: block;
+    padding: 2rem 0rem;
+    font-size: 1.5rem;
+    color: $color-purple;
+    text-transform: uppercase;
 }
